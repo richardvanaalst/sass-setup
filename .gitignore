@@ -1,0 +1,37 @@
+# Mac OS files
+._*
+.DS_Store
+Icon
+.Spotlight-V100
+
+# Linux files
+*~
+
+# Windows files
+Desktop.ini
+Thumbs.db
+
+# Editor files
+*.esproj
+.sass-cache
+*.sublime-project
+*.sublime-workspace
+.tmproj
+
+# VCS
+.CVS
+.hg
+.hgignore
+.git
+.svn
+
+# Packed files
+*.7z
+*.dmg
+*.gem
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip

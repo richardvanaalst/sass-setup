@@ -1,0 +1,84 @@
+// SASS import file: will be imported in other SASS files
+// Base mixins
+
+
+
+// Hide the element, when dir=ltr
+@mixin hide() {
+	position: absolute;
+	top: auto;
+	left: 100%; // -999em;
+	right: auto;
+}
+
+
+
+// Hide the text inside the element, when dir=ltr
+@mixin hide-text() {
+	display: block;
+	overflow: hidden;
+	text-indent: 100%; // -999em;
+	//direction: ltr;
+	white-space: nowrap;
+}
+
+
+
+// Remove list-style
+@mixin no-list-style() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+
+@mixin background-color($color: white, $a: 1) {
+	@if ($a < 1) {
+		/* Fallback for older browsers: */
+	}
+	background-color: $color;
+	@if ($a < 1) {
+		background-color: rgba($color, $a);
+	}
+}
+
+
+
+@mixin background-gradient($gradient, $fallback) {
+	@if ($fallback) {
+		/* Fallback for older browsers: */
+		background-color: $fallback;
+	}
+	@include background-image($gradient);
+}
+
+
+
+// Image sprites, with and without grid per sprite
+@mixin sprite($sprite: sprite, $x: -100%, $y: -100%) {
+	background: {
+		image: url("../img/#{$sprite}.png");
+		repeat: no-repeat;
+	}
+	@include sprite-position($sprite, $x, $y);
+}
+
+@mixin sprite-position($sprite: sprite, $x: -100%, $y: -100%) {
+	$gridX: 1;
+	$gridY: 1;
+
+	@if ($sprite == sprite) {
+		@if (unitless($x)) {
+			$gridX: -32px;
+		}
+		@if (unitless($y)) {
+			$gridY: -32px;
+		}
+	}
+
+	$x: $gridX * $x;
+	$y: $gridY * $y;
+
+	background-position: $x $y;
+}

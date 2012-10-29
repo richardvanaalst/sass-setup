@@ -1,0 +1,42 @@
+// SASS import file: will be imported in other SASS files
+// SASS classes and variables
+
+
+
+  // //
+ // //  Defaults for SASS/Compass mixins
+// //
+
+// Text shadows
+$default-text-shadow-color: black;
+$default-text-shadow-blur: 0px;
+$default-text-shadow-h-offset: 0px;
+$default-text-shadow-v-offset: 1px;
+
+// Border radius
+$default-border-radius: 2px;
+
+// Animations
+$default-transition-property: all;
+$default-transition-duration: 0.2s;
+
+$base-font-size: 16px;
+/* // Calculate px to em/rem/px/unitless
+@function calc-size($size, $unit: "", $base-font-size: $base-font-size) {
+	$new-size: 1;
+
+	@if ($unit == em) {
+		$new-size: $size / ($base-font-size / 1em);
+	}
+	@else if ($unit == rem) {
+		$new-size: $size / ($base-font-size / 1rem);
+	}
+	@else if ($unit == px) {
+		$new-size: $size;
+	}
+	@else {
+		$new-size: $size / $base-font-size;
+	}
+
+	@return $new-size;
+}*/
