@@ -4,20 +4,83 @@
 
 
   // //
+ // //  Settings
+// //
+
+// Site width
+$site-width:		960px;
+
+// Font families
+$sans-serif:		sans-serif;
+$serif:				serif;
+$body-font:			$sans-serif;
+
+// Font sizes
+$base-font-size:	16px;
+
+$h1-font-size:		20px;
+$h2-font-size:		18px;
+$h3-font-size:		16px;
+$h4-font-size:		14px;
+$h5-font-size:		12px;
+$h6-font-size:		10px;
+
+// Colours
+$sitename-color1:	#f00;
+$sitename-color2:	#0f0;
+$sitename-color3:	#00f;
+
+$black:				#000;
+$white:				#fff;
+$grey:				#888;
+$red:				#f00;
+$orange:			#f80;
+$yellow:			#ff0;
+$green:				#0f0;
+$cyan:				#0ff;
+$blue:				#00f;
+$purple:			#80f;
+$magenta:			#f0f;
+
+// Item colours
+$body-color:		$white;
+
+$title-color:		$black;
+$text-color:		$black;
+
+$link-color:		$blue;
+$link-hover:		$purple;
+$link-active:		$red;
+
+$nav-color:			$link-color;
+$nav-hover:			$link-hover;
+$nav-active:		$link-active;
+
+
+
+  // //
  // //  Defaults for SASS/Compass mixins
 // //
 
 // Text shadows
-$default-text-shadow-color: black;
-$default-text-shadow-blur: 0px;
-$default-text-shadow-h-offset: 0px;
-$default-text-shadow-v-offset: 1px;
+$default-text-shadow-color:		black;
+$default-text-shadow-h-offset:	0px;
+$default-text-shadow-v-offset:	1px;
+$default-text-shadow-blur:		0px;
+
+// Box shadows
+$default-box-shadow-color:		#333333;
+$default-box-shadow-h-offset:	0px;
+$default-box-shadow-v-offset:	1px;
+$default-box-shadow-blur:		0px;
+$default-box-shadow-spread:		false;
+$default-box-shadow-inset:		false;
 
 // Border radius
-$default-border-radius: 2px;
+$default-border-radius:			4px;
 
 // Animations
-$default-transition-property: all;
-$default-transition-duration: 0.2s;
-
-$base-font-size: 16px;
+$default-transition-property:	all;
+$default-transition-duration:	0.2s;
+$default-transition-function:	false
+$default-transition-delay:		false
