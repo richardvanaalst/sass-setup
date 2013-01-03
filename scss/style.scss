@@ -4,10 +4,21 @@
  **                                             **
 \*** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ***/
 
+
+
+// All Compass classes - http://compass-style.org/
 @import "compass";
+
+// All setting: fonts, sizes, colours, defaults etc.
 @import "_setup";
+
+// Default mixins
 @import "_mixins";
+
+// Normalize.css - http://necolas.github.com/normalize.css/
 @import "_normalize";
+
+// Styling of base html elements
 @import "_base";
 
 
@@ -15,3 +26,5 @@
 /*** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ***\
  **    Specific styling                         **
 \*** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ***/
+
+
