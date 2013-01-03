@@ -15,7 +15,10 @@ relative_assets = true
 
 # You can select your preferred output style here (can be overridden via the command line).
 # output_style = :expanded or :nested or :compact or :compressed
+# Development
 output_style = :expanded
+# Production
+#output_style = :compressed
 
 # To disable debugging comments that display the original location of your selectors.
 line_comments = false
