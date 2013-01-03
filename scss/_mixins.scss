@@ -33,11 +33,24 @@
 
 
 
+// Before and after pseudo-elements
+@mixin pseudo($width: auto, $height: auto, $display: block, $content: " ") {
+	display: $display;
+	content: $content;
+	width: $width;
+	height: $height;
+}
+
+
+
+// Background colour with transparency and fallback
 @mixin background-color($color: white, $a: 1) {
 	@if ($a < 1) {
 		/* Fallback for older browsers: */
 	}
+
 	background-color: $color;
+
 	@if ($a < 1) {
 		background-color: rgba($color, $a);
 	}
@@ -45,34 +58,55 @@
 
 
 
+// Background gradient with fallback
 @mixin background-gradient($gradient, $fallback) {
 	@if ($fallback) {
 		/* Fallback for older browsers: */
 		background-color: $fallback;
 	}
+
+	@include background-image($gradient);
+}
+
+
+
+// Background linear gradient with fallback
+@mixin linear-gradient($color1, $color2, $fallback: false) {
+	/* Fallback for older browsers: */
+	@if ($fallback) {
+		background-color: $fallback;
+	}
+	@else {
+		background-color: mix($color1, $color2);
+	}
+
+	$gradient: linear-gradient($color1, $color2);
+
 	@include background-image($gradient);
 }
 
 
 
 // Image sprites, with and without grid per sprite
-@mixin sprite($sprite: sprite, $x: -100%, $y: -100%) {
+// Default img: sprite-32grid.png
+@mixin sprite($x: -100%, $y: -100%, $sprite: "32grid") {
 	background: {
-		image: url("../img/#{$sprite}.png");
+		image: url("../img/sprite-#{$sprite}.png");
 		repeat: no-repeat;
 	}
-	@include sprite-position($sprite, $x, $y);
+
+	@include sprite-position($x, $y, $sprite);
 }
 
-@mixin sprite-position($sprite: sprite, $x: -100%, $y: -100%) {
+@mixin sprite-position($x: -100%, $y: -100%, $sprite: "32grid") {
 	$gridX: 1;
 	$gridY: 1;
 
-	@if ($sprite == sprite) {
-		@if (unitless($x)) {
+	@if ($sprite == "32grid") {
+		@if (unitless($x) and $x > 0) {
 			$gridX: -32px;
 		}
-		@if (unitless($y)) {
+		@if (unitless($y) and $y > 0) {
 			$gridY: -32px;
 		}
 	}
@@ -81,4 +115,13 @@
 	$y: $gridY * $y;
 
 	background-position: $x $y;
+}
+
+
+
+// Calculate sizes from px to em
+// +0.00001 for browser's rounding issues
+@function em($size, $base-font-size: $base-font-size) {
+	$new-size: 1em * ($size / $base-font-size + 0.00001);
+	@return $new-size;
 }
