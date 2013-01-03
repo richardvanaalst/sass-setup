@@ -63,13 +63,13 @@ $nav-active:		$link-active;
 // //
 
 // Text shadows
-$default-text-shadow-color:		black;
+$default-text-shadow-color:		rgba($black, 0.3);
 $default-text-shadow-h-offset:	0px;
 $default-text-shadow-v-offset:	1px;
 $default-text-shadow-blur:		0px;
 
 // Box shadows
-$default-box-shadow-color:		#333333;
+$default-box-shadow-color:		rgba($black, 0.3);
 $default-box-shadow-h-offset:	0px;
 $default-box-shadow-v-offset:	1px;
 $default-box-shadow-blur:		0px;
@@ -82,5 +82,5 @@ $default-border-radius:			4px;
 // Animations
 $default-transition-property:	all;
 $default-transition-duration:	0.2s;
-$default-transition-function:	false
-$default-transition-delay:		false
+$default-transition-function:	false;
+$default-transition-delay:		false;
