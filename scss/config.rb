@@ -3,9 +3,9 @@
 # Set this to the root of your project when deployed.
 http_path       = "/"
 sass_dir        = "./"
-css_dir         = "../css"
-images_dir      = "../img"
-javascripts_dir = "../js"
+css_dir         = "../stylesheets"
+images_dir      = "../images"
+javascripts_dir = "../javascripts"
 
 # Set the environment you're working in.
 environment = :development

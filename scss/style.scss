@@ -1,30 +1,50 @@
 /*** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ***\
  **                                             **
- **    Main styles                              **
+**         Website stylesheet                    **
+**                                               **
+**         (c) 2013 Richard van Aalst            **
+**         http://riesma.nl                      **
  **                                             **
 \*** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ***/
 
 
 
-// All Compass classes - http://compass-style.org/
+// Compass classes - http://compass-style.org/
+// All
 @import "compass";
 
-// All setting: fonts, sizes, colours, defaults etc.
-@import "_setup";
+// CSS3 only
+//@import "compass/css3";
+
+// Layout only
+//@import "compass/layout";
+
+// Reset: preferably use Normalize.css instead
+//@import "compass/reset";
+
+// Typography
+//@import "compass/typography";
+
+// Utilities
+//@import "compass/utilities";
+
+
+// All setting: fonts, sizes, colours, SASS defaults etc.
+@import "setup";
 
 // Default mixins
-@import "_mixins";
+@import "mixins";
 
 // Normalize.css - http://necolas.github.com/normalize.css/
-@import "_normalize";
+@import "normalize";
 
 // Styling of base html elements
-@import "_base";
+@import "base";
 
 
 
 /*** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ***\
- **    Specific styling                         **
+ **         Specific styling                    **
 \*** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ***/
 
 
