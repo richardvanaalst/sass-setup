@@ -84,16 +84,16 @@
 
 
 // Background linear gradient with fallback
-@mixin linear-gradient($color1, $color2, $fallback: false) {
+@mixin linear-gradient($from, $to, $fallback: false) {
 	/* Fallback for older browsers: */
 	@if ($fallback) {
 		background-color: $fallback;
 	}
 	@else {
-		background-color: mix($color1, $color2);
+		background-color: mix($from, $to);
 	}
 
-	$gradient: linear-gradient($color1, $color2);
+	$gradient: linear-gradient($from, $to);
 
 	@include background-image($gradient);
 }
@@ -102,7 +102,7 @@
 
 // Better to use Compass sprite helper!
 // Image sprites, with and without grid per sprite
-// Default img: sprite-32grid.png
+// Default image name: sprite-32grid.png
 @mixin sprite($x: -100%, $y: -100%, $sprite: "32grid") {
 	background: {
 		image: url("../img/sprite-#{$sprite}.png");
