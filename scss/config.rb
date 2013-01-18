@@ -22,3 +22,6 @@ output_style = :expanded
 
 # To disable debugging comments that display the original location of your selectors.
 line_comments = false
+
+# Syntax: nested :scss or indented :sass
+preferred_syntax = :scss
