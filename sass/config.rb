@@ -6,6 +6,7 @@ sass_dir        = "./"
 css_dir         = "../stylesheets"
 images_dir      = "../images"
 javascripts_dir = "../javascripts"
+fonts_dir       = "../fonts"
 
 # Set the environment you're working in.
 environment = :development
@@ -22,6 +23,7 @@ output_style = :expanded
 
 # To disable debugging comments that display the original location of your selectors.
 line_comments = false
+color_output = false
 
 # Syntax: nested :scss or indented :sass
 preferred_syntax = :scss
